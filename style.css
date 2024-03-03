@@ -526,6 +526,10 @@ display: flex;
 margin-top: 30px;
 margin-left: 10px;
 }
+.dytronelogo2{
+  margin-top: 20px;
+  margin-left: 10px;
+  }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   h1,
   .h1 {
@@ -533,6 +537,7 @@ margin-left: 10px;
   h2,
   .h2 {
     font-size: 26px; } }
+
 
 @media only screen and (max-width: 767px) {
   h1,
@@ -3278,7 +3283,31 @@ Features area styles
       top: 0; }
     .feature__icon span:last-child {
       top: 100%; }
-
+.feature__icon1{
+  color: #ffffff;
+  
+  font-size: 60px;
+  height: 65px;
+  width: 65px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative; }
+  .feature__icon1 span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s; }
+    .feature__icon1 span i {
+      line-height: 65px; }
+    .feature__icon1 span:first-child {
+      top: 0; }
+    .feature__icon1 span:last-child {
+      top: 100%; }
 .feature__content {
   -webkit-flex-shrink: 100;
   -moz-flex-shrink: 100;
@@ -5350,7 +5379,11 @@ Footer Styles
       .footer--widgets .widget-contact-info ul li p {
         margin-bottom: 0;
         line-height: 26px; }
-
+@media only screen and (max-width: 375px) {
+  .copyright a {
+      font-size: 10px;
+  }
+}
 .copyright {
   padding: 22px 0;
   font-size: 13px;
