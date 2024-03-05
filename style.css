@@ -3229,9 +3229,6 @@ About Area
       padding-right: 0;
       padding-left: 0; } }
 
-/**
-Features area styles
-*/
 .features-area div[class^="col-"]:nth-child(even) .feature::before {
   background: rgba(51, 57, 130, 0.9); }
 
