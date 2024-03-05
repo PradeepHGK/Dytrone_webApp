@@ -5256,9 +5256,14 @@ Footer Styles
       .footer--widgets .widget-contact-info ul li p {
         margin-bottom: 0;
         line-height: 26px; }
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 356px)and (max-width:435px) {
   .copyright a {
-      font-size: 10px;
+      font-size: 9px;
+  }
+}
+@media only screen and (min-width: 246px) and (max-width: 355px) {
+  .copyright a {
+      font-size: 5px;
   }
 }
 .copyright {
