@@ -3234,6 +3234,7 @@ About Area
 
 .feature {
   padding: 85px 120px;
+  margin-bottom: 150px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
