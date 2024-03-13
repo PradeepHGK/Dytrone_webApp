@@ -3397,6 +3397,10 @@ About Area
 /**
 Service Area
 */
+#service5{
+  justify-content: center;
+  text-align: center;
+}
 .service {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3404,6 +3408,7 @@ Service Area
   display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
+  
   padding: 15px;
   padding: 25px 15px;
   border: 1px solid #eeeeee;
