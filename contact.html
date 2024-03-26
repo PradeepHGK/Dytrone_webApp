@@ -54,11 +54,12 @@
 					<div class="header__top__inner">
 						<ul class="header__top__info">
 							<li>
-								<a href="https://wa.me/+917200190005"target="_blank"class="fa fa-phone"></i>+91 9538337168</a>
+								<a href="https://wa.me/+245720829302"target="_blank"class="fa fa-phone"></i>+245720829302</a>
 							</li>
 							<li>
-								<a href="#">
-									<i class="fa fa-envelope-o"></i> dytrone@dytrone.in</a>
+								<a href="mailto:dytronelimited@outlook.com">
+
+									<i class="fa fa-envelope-o"></i>  dytronelimited@outlook.com </a>
 							</li>
 						</ul>
 						<div class="header__top__button">
@@ -204,16 +205,18 @@
 									<div class="pg-contact__blocks">
 										<div class="single-block address">
 											<h6>address</h6>
-											<p>#1364 , 6th main,mahalakshmipuram ,bangalore-560086</p>
+											<p>Address Embassy House unit 4 Harrambee Ave,<br>
+												PO BOX 74165 Nairobi Kenya. </p>
 										</div>
 										<div class="single-block phone">
 											<h6>Phone</h6>
-											<p><a href="https://wa.me/+917200190005"target="_blank">+91 9538337168</a></p>
+											<p><a href="https://wa.me/+245720829302"target="_blank">+245720829302</a></p>
 
 										</div>
 										<div class="single-block web">
 											<h6>email</h6>
-											<p><a href="#">dytrone@dytrone.in</a></p>
+											<p><a href="mailto:dytronelimited@outlook.com">dytronelimited@outlook.com</a>
+											</p>
 
 										</div>
 									</div>
@@ -244,7 +247,7 @@
 								<p></p>
 								<div class="calltoaction-button mt-4">
 									<span class="calltoaction-icon"><i class="flaticon-phone"></i></span>
-									<a href="https://wa.me/+917200190005"target="_blank">+91 9538337168</a>
+									<a href="https://wa.me/+245720829302"target="_blank">+245720829302</a>
 								</div>
 							</div>
 						</div>
@@ -265,7 +268,7 @@
 					<div class="widget-area footer--widgets">
 
 						<!-- Single Widget -->
-						<div class="widget widget-about">
+						<div class="widget widget-about mx-auto">
 							<div class="footer-area__logo">
 								<!-- <a href="index.html">
 									<img src="images/logo/logo-footer.png" alt="footer logo">
@@ -301,7 +304,7 @@
 						<!--// Single Widget -->
 
 						<!-- Single Widget -->
-						<div class="widget widget-quick-links">
+						<div class="widget widget-quick-links mx-auto">
 							<h5 class="widget-title">QUICK LINKS</h5>
 							<ul>
 								<li>
@@ -322,43 +325,27 @@
 						<!--// Single Widget -->
 
 						<!-- Single Widget -->
-						<div class="widget widget-twitter-feed">
-							<h5 class="widget-title">Location </h5>
-							<!-- <ul>
-								<li>
-									<p>
-										<a href="#">@Alex Smith</a>, unde omnis te us error sit voluptatem</p>
-									<span class="time">
-										<a href="#">10 Mins ago</a>
-									</span>
-								</li>
-								<li>
-									<p>
-										<a href="#">@Justin Bieber</a>, unde omnis te us error sit voluptatem</p>
-									<span class="time">
-										<a href="#">12 Mins ago</a>
-									</span>
-								</li>
-							</ul> -->
-						</div>
+						
 						<!--// Single Widget -->
 
 						<!-- Single Widget -->
-						<div class="widget widget-contact-info">
+						<div class="widget widget-contact-info mx-auto">
 							<h5 class="widget-title">Contact Info</h5>
 							<ul>
 								<li>
-									<p>#1364 , 6th main, <br>mahalakshmipuram ,bangalore-560086</p>
+									<p>Embassy House unit 4 Harrambee Ave,<br>
+										PO BOX 74165 Nairobi Kenya. </p>
 								</li>
 								<li>
 									<p>
-										<a href="https://wa.me/+917200190005"target="_blank">+91 9538337168</a>
+										<a href="https://wa.me/+245720829302"target="_blank">+245720829302</a>
 									</p>
 
 								</li>
 								<li>
 									<p>
-										<a href="mailto://#">dytrone@dytrone.in</a>
+										<a href="mailto:dytronelimited@outlook.com">dytronelimited@outlook.com</a>
+
 									</p>
 
 								</li>
@@ -395,22 +382,22 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxvP66_Xk1ts77oL2Z7EpDxhDD_jMg-D0"></script>
 	<script>
 		// When the window has finished loading create our google map below
-		google.maps.event.addDomListener(window, 'load', init);
+		google.maps.event.addDomListener(window, 'load', () => init("https://www.google.com/maps/place/Harambee+Ave,+Nairobi,+Kenya/@-1.289182,36.8213829,17z/data=!3m1!4b1!4m6!3m5!1s0x182f10d863f97aa5:0x3d71fb323c499993!8m2!3d-1.289182!4d36.8239578!16s%2Fg%2F1tm92h1p?entry=ttu"));
 
-		function init() {
-			// Basic options for a simple Google Map
-			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-			var mapOptions = {
-				// How zoomed in you want the map to start at (always required)
-				zoom: 12,
+function init(locationLink) {
+	// Parse latitude and longitude from the location link
+				const url = new URL(locationLink);
+				const latLngString = url.pathname.split('@')[1];
+				const [lat, lng] = latLngString.split(',');
 
-				scrollwheel: false,
-
-				// The latitude and longitude to center the map (always required)
-				center: new google.maps.LatLng(40.740610, -73.935242), // New York
-
-				// How you would like to style the map. 
-				// This is where you would paste any style found on
+				// Basic options for a simple Google Map
+				var mapOptions = {
+					// How zoomed in you want the map to start at (always required)
+					zoom: 17, // Adjust zoom level as needed
+					scrollwheel: false,
+					// The latitude and longitude to center the map (always required)
+					center: new google.maps.LatLng(parseFloat(lat), parseFloat(lng)),
+							// This is where you would paste any style found on
 
 				styles: [{
 						"featureType": "water",
@@ -578,18 +565,17 @@
 			// We are using a div with id="map" seen below in the <body>
 			var mapElement = document.getElementById('google-map');
 
-			// Create the Google Map using our element and options defined above
-			var map = new google.maps.Map(mapElement, mapOptions);
+				// Create the Google Map using our element and options defined above
+				var map = new google.maps.Map(mapElement, mapOptions);
 
-			// Let's also add a marker while we're at it
-			var marker = new google.maps.Marker({
-				position: new google.maps.LatLng(40.740610, -73.935242),
-				map: map,
-				title: 'Fsulting',
-				icon: "images/icons/marker.png",
-				animation: google.maps.Animation.BOUNCE
-			});
-		}
+				// Let's also add a marker while we're at it
+				var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(parseFloat(lat), parseFloat(lng)), // Set marker position to parsed lat/lng
+					map: map,
+					title: 'Harambee Ave, Nairobi, Kenya',
+					animation: google.maps.Animation.BOUNCE
+				});
+				}
 	</script>
 
 	<!-- JS Files -->
