@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -8,12 +8,22 @@ if(isset($_POST['submit'])) {
     $subject = 'Form Submission';
     
     $message = "Name: " . $name . "\n" . "Phone: " . $phone;
-    $headers = "From: " .$email;
+    $headers = "From: " . $email;
 
-    if(mail($to, $subject, $message, $headers)){
-        echo"<h1>Sent Successfully ! Thank You" . " " . $name . ",We will Contact You Shortly!</h1>";
-    }else{
-        echo"Went wrong";
+    
+    if (mail($to, $subject, $message, $headers)) {
+        
+        $response = array('success' => true, 'name' => $name);
+        echo json_encode($response);
+    } else {
+        
+        $response = array('success' => false);
+        echo json_encode($response);
+    }
+} else {
+    
+    $response = array('success' => false, 'error' => 'Form not submitted');
+    echo json_encode($response);
+}
 
-    }}
 ?>
